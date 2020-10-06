@@ -5,19 +5,23 @@
 }
 
 .topnav {
-    display: flex;
-    justify-content: left;
-    background-color: black;
-    height: 60px;
-    width: auto;
+    overflow: hidden;
+    background-color: #e9e9e9;
 }
 
 .topnav a {
-    padding: 20px 5px 0 5px;
-    margin-left: 10px;
-    color: blanchedalmond;
-    background-color: rgb(31, 30, 30);
-    column-count: 4;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 
@@ -25,12 +29,40 @@
     column-count: 5;
 }*/
 
+.row {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    background: #fff;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 2.2em;
+    float: left;
+    line-height: 0.002;
+    margin-right: 25%;
+    margin-left: 10%;
+}
+
+.Filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: rgb(82, 82, 189);
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
+    font-family: inherit;
 }
 
 .dropdown {
@@ -39,6 +71,7 @@
 }
 
 .dropdown-content {
+    font-family: inherit;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -63,7 +96,43 @@
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: rgb(82, 82, 189);
+}
+
+.Location {
+    height: 34px;
+    font-size: 14px;
+    ;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 2px;
+    width: 250px;
+    margin-left: 4px;
+}
+
+.btn {
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    padding: 6px 12px;
+    font-size: 14px;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-color: #ccc;
+    border-radius: 2px;
+    background-color: rgb(82, 82, 189);
+    color: white;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
