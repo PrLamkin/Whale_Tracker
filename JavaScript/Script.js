@@ -4,7 +4,7 @@ var totalWhales;
 
 function initMap(species) {
     $.ajax({
-        url: "http://hotline.whalemuseum.org/api.json?species=" + species + "&limit=1000",
+        url: "https://hotline.whalemuseum.org/api.json?species=" + species + "&limit=1000",
         method: "GET",
     }).then(function(response) {
         totalWhales = response;
