@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: https: //www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperset.com%2Fbackground-ocean&psig=AOvVaw2QIr_dnDX8qwRHId2U1Zmo&ust=1602175546757000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOi57Jf3ouwCFQAAAAAdAAAAABAJ("Ocean  man, take me by the land lead me to the land");
-}
-
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
@@ -27,11 +23,6 @@ body {
     background-color: #ddd;
     color: black;
 }
-
-
-/*.container {
-    column-count: 5;
-}*/
 
 .row {
     font-size: 14px;

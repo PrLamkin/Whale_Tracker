@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fancy_WorkSpace.css">
+    <link rel="stylesheet" href="CSS/fancy_WorkSpace.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script defer src="../JavaScript/Script.js"></script>
+    <script defer src="JavaScript/Script.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70&callback=initMap"></script>
     <title>Whale Tracker</title>
 </head>
@@ -14,9 +14,6 @@
 <body>
     <div class="topnav">
         <a class="active" href="#home">Home</a>
-        <a href="#">PlaceHolder</a>
-        <a href="#">placeHolder</a>
-        <a href="#">placeHolder</a>
     </div>
 
     <div id="filters" class="container">
@@ -31,14 +28,21 @@
                     <div class="dropdown-content">
                         <option>gray whale</option>
                         <option>orca</option>
-                        <option>humpback</option>
-                        <option>atlantic white-sided dolphin</option>
-                        <option>pacific white-sided dolphin</option>
-                        <option>harbor porpoise</option>
-                        <option>harbor seal</option>
+                         <option>humpback</option>
+                       <option>atlantic white-sided dolphin</option> 
+                       <option>pacific white-sided dolphin</option>
+                       <option>harbor porpoise</option>
+                       <option>harbor seal</option>
                     </div>
                 </div>
-                
+                <div class="Location">
+                    <form>
+                        <label for="text">
+                            <input type="text" id="text">
+                            <input type="submit" id="submit">
+                        </label>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
