@@ -1,6 +1,7 @@
 var initialMap;
-var coords = [0,0];
-var totalWhales; 
+var coords = [0, 0];
+var totalWhales;
+
 function initMap(species) {
         $.ajax({
           url: "http://hotline.whalemuseum.org/api.json?species=" + species + "&limit=1000",
@@ -22,8 +23,8 @@ function initMap(species) {
                   var marker = new google.maps.Marker({position: latLng, map: initialMap});
               }
             });
-        }
-
+          }
+          
         var locationLong;
         var locationLat;
         function spot(z){
