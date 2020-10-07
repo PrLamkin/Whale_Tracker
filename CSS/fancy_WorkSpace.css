@@ -7,12 +7,12 @@
 
 body {
     background-image: url(https://image.freepik.com/free-vector/whales-seamless-pattern-blue-background_1561-9.jpg);
-    z-index: -5;
 }
 
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
+    z-index: 1;
 }
 
 .topnav a {
@@ -28,13 +28,6 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
-}
-
-.Filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
 }
 
 .dropbtn {
@@ -57,7 +50,6 @@ body {
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
     cursor: pointer;
 }
 
@@ -80,25 +72,11 @@ body {
     background-color: rgb(82, 82, 189);
 }
 
-.Location {
-    height: 34px;
-    font-size: 14px;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    border-radius: 2px;
-    width: 250px;
-    margin-left: 4px;
-}
-
 .btn {
     font: inherit;
     overflow: visible;
     text-transform: none;
     font-family: inherit;
-    padding: 6px 12px;
     font-size: 14px;
     touch-action: manipulation;
     cursor: pointer;
@@ -109,29 +87,12 @@ body {
     color: white;
 }
 
-
-/* #map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.footer {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    height: 60px;
-    width: auto;
-}
-
 #map {
     height: 90%;
     width: 90%;
     border: black solid 8.5655px;
     margin: 12px;
 }
-
-
-/* Optional: Makes the sample page fill the window. */
 
 html,
 body {
