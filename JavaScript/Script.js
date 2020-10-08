@@ -1,5 +1,5 @@
 var initialMap;
-var coords = [0, 0];
+var coords = [0, 0,];
 var totalWhales;
 
 function initMap(species) {
@@ -8,6 +8,7 @@ function initMap(species) {
           method: "GET",
         }).then(function(response) {
             totalWhales = response;
+            console.log(totalWhales)
             
         }).then(function() {
             initialMap = new google.maps.Map(document.getElementById('map'), {
@@ -32,10 +33,13 @@ function initMap(species) {
           url : "https://maps.googleapis.com/maps/api/geocode/json?address=" + z +"&key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70",
           method : "GET"
         }).then(function(response){
+          console.log(response)
           locationLat = response.results[0].geometry.location.lat
           console.log(locationLat)
           locationLong = response.results[0].geometry.location.lng
           console.log(locationLong)
+
+
         })
       }
       spot()
@@ -46,11 +50,11 @@ function initMap(species) {
         initMap(x);
       });
 
-      $("#submit").on("click", function(event){
+
+      $("#submit").on("click", function(event,locationLat,locationLong){
         event.preventDefault();   
         var z = $("#text").val().trim();
         spot(z)
+        newLocation(locationLat,locationLong);
       });
-
-
 
