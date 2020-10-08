@@ -4,60 +4,43 @@
     box-sizing: border-box;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
+body {
+    background-image: url(Fishy.jpg);
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.row {
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
-    background: #fff;
+.topnav img {
+    width: 100%;
+    height: 160px;
+    box-shadow: 0px 10px 12px 10px black;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: inherit;
     font-weight: 500;
-    color: #1a1a1a;
+    color: white;
     font-size: 2.2em;
     float: left;
-    line-height: 0.002;
     margin-right: 25%;
     margin-left: 10%;
+    text-decoration: none;
 }
 
 .Filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    margin-top: -5px;
+    display: block;
+    background-color: rgba(31, 32, 32, 0.95);
+    padding: 22px 5px 12px 8px;
+    border-radius: 7px;
 }
 
 .dropbtn {
-    background-color: rgb(82, 82, 189);
+    background-color: rgb(25, 80, 75);
     color: white;
     font-size: 15px;
-    border: none;
     font-family: inherit;
+    padding: 13px;
+    display: block;
+    border-radius: 7px;
 }
 
 .dropdown {
@@ -92,75 +75,109 @@ h1 {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: rgb(82, 82, 189);
+    background-color: rgb(81, 102, 114);
 }
 
-.Location {
-    height: 34px;
-    font-size: 14px;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    border-radius: 2px;
-    width: 250px;
-    margin-left: 4px;
+#text {
+    position: absolute;
+    top: 4%;
+    left: 37.53478593859834759087%;
+    transform: translate(-50%, -50%);
+    background: white;
+    height: 40px;
+    border-radius: 40px;
+    padding: 12px;
+    border: none;
+    outline: none;
 }
 
-.btn {
-    font: inherit;
-    overflow: visible;
-    text-transform: none;
-    font-family: inherit;
-    padding: 6px 12px;
-    font-size: 14px;
-    touch-action: manipulation;
+#submit {
+    position: absolute;
+    top: 4%;
+    left: 42.53478593859834759087%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    border-radius: 40px;
+    padding: 12px;
+    border: none;
+    outline: none;
     cursor: pointer;
-    border: 1px solid transparent;
-    border-color: #ccc;
-    border-radius: 2px;
-    background-color: rgb(82, 82, 189);
-    color: white;
-}
-
-
-/* #map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.footer {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    height: 60px;
-    width: auto;
 }
 
 #map {
-    height: 90%;
-    width: 90%;
-    border: black solid 8.5655px;
-    margin: 12px;
+    float: left;
+    height: 70%;
+    width: 70%;
+    border: rgb(28, 96, 99, 95%) solid 8.5px;
+    box-shadow: 0px 8px 16px 0px black;
+    margin: 12px 4px 12px 12px;
+    border-radius: 12px;
 }
 
+.sideCard {
+    margin: 10px 8px 12px 22px;
+    background-color: white;
+    border-radius: 5px;
+    border: black solid 1px;
+    box-shadow: 0px 8px 16px 0px black;
+    height: 70%;
+    width: 22.055757487%;
+    display: inline-block;
+    justify-content: right;
+    text-align: center;
+}
 
-/* Optional: Makes the sample page fill the window. */
+.sideCard h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sideCard p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 html,
 body {
+    min-height: 100%;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+footer {
+    background-color: rgba(35, 36, 36, 0.95);
+    padding: 13px;
+    color: white;
+    border-radius: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+footer a {
+    text-decoration: underline;
+    color: white;
+}
 
 
 .pictureSize {
     height: 100px;
     width: 175px;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /*font-size: 14px;
@@ -172,7 +189,3 @@ box-sizing: border-box;
 position: relative;
 align-items: stretch;
 display: inline-block;
-
-
-
-
