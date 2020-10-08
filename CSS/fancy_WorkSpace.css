@@ -15,6 +15,7 @@ body {
 }
 
 h1 {
+    margin-top: 45px;
     font-family: inherit;
     font-weight: 500;
     color: white;
@@ -78,36 +79,37 @@ h1 {
     background-color: rgb(81, 102, 114);
 }
 
+.location {
+    float: right;
+}
+
 #text {
-    position: absolute;
-    top: 4%;
-    left: 37.53478593859834759087%;
-    transform: translate(-50%, -50%);
-    background: white;
-    height: 40px;
-    border-radius: 40px;
-    padding: 12px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
     border: none;
+    border-radius: 7px;
+    box-shadow: 0px 0px 16px 0px black;
     outline: none;
 }
 
 #submit {
-    position: absolute;
-    top: 4%;
-    left: 42.53478593859834759087%;
-    transform: translate(-50%, -50%);
-    height: 40px;
-    border-radius: 40px;
-    padding: 12px;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-left: -3.654654684648px;
+    background: #ddd;
+    font-size: 17px;
     border: none;
-    outline: none;
     cursor: pointer;
+    border-radius: 7px;
+    outline: none;
 }
 
 #map {
     float: left;
-    height: 70%;
-    width: 70%;
+    height: 65%;
+    width: 65%;
     border: rgb(28, 96, 99, 95%) solid 8.5px;
     box-shadow: 0px 8px 16px 0px black;
     margin: 12px 4px 12px 12px;
@@ -167,25 +169,21 @@ footer a {
     color: white;
 }
 
-
 .pictureSize {
     height: 100px;
     width: 175px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     body {
         width: 100%;
         height: auto;
     }
 }
 
-/*font-size: 14px;
-line-height: 20px;
-color: #333;
-font-family: Whitney,"Trebuchet MS",Arial,sans-serif;
-white-space: nowrap;
-box-sizing: border-box;
-position: relative;
-align-items: stretch;
-display: inline-block;
+@media (max-width: 600px) {
+    .location {
+        width: 100%;
+        height: auto;
+    }
+}
