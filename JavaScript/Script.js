@@ -1,6 +1,8 @@
 var initialMap;
 var coords = [0, 0];
 var totalWhales;
+var infoBox = "Hellooo whales!";
+
 // parameters will be either "species=userSelection" or "near=123,123&radius=25" to build the whaleAPI URL based on user selection
 function initMap(parameters) {
         $.ajax({
@@ -17,15 +19,29 @@ function initMap(parameters) {
                 mapTypeId: 'terrain'
               });
               for (var i = 0; i < totalWhales.length; i++) {
+                  infoBox = "Species: " + totalWhales[i].species + "++";
+                  infoBox += "Quantity: " + totalWhales[i].quantity + "++";
+                  infoBox += "Location: " + totalWhales[i].location + "++";
+                  infoBox += "Sigthed at: " + totalWhales[i].sighted_at;
                   coords[0] = totalWhales[i].latitude;
                   coords[1] = totalWhales[i].longitude;
                   var latLng = new google.maps.LatLng(coords[0],coords[1]);
                   var marker = new google.maps.Marker({position: latLng, map: initialMap});
                   console.log(marker);
+                  attachInfo(marker, infoBox);
               }
             });
           }
-          
+
+function attachInfo(marker, infoBox) {
+const infowindow = new google.maps.InfoWindow({
+    content: infoBox
+});
+marker.addListener("click", function() {
+    infowindow.open(marker.get("map"), marker);
+});
+}
+
 // geocoder takes a text and returns latitude and longtitude of that location. Then we build whalesURL and pass it to initMap
 function geocoder(addressTxt){
         $.ajax({
@@ -56,6 +72,3 @@ $("#submit").on("click", function(event){
         console.log("the user searched for: " + searchInput);
         geocoder(searchInput);
 });
-
-
-
