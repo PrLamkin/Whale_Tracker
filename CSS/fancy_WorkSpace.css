@@ -167,9 +167,25 @@ footer a {
     color: white;
 }
 
+
+.pictureSize {
+    height: 100px;
+    width: 175px;
+}
+
 @media (max-width: 600px) {
     body {
         width: 100%;
         height: auto;
     }
 }
+
+/*font-size: 14px;
+line-height: 20px;
+color: #333;
+font-family: Whitney,"Trebuchet MS",Arial,sans-serif;
+white-space: nowrap;
+box-sizing: border-box;
+position: relative;
+align-items: stretch;
+display: inline-block;
