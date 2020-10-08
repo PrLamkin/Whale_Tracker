@@ -157,6 +157,12 @@ body {
 }
 
 
+
+.pictureSize {
+    height: 100px;
+    width: 175px;
+}
+
 /*font-size: 14px;
 line-height: 20px;
 color: #333;
@@ -166,3 +172,7 @@ box-sizing: border-box;
 position: relative;
 align-items: stretch;
 display: inline-block;
+
+
+
+
