@@ -1,56 +1,61 @@
 var initialMap;
 var coords = [0, 0];
 var totalWhales;
-
-function initMap(species) {
+// parameters will be either "species=userSelection" or "near=123,123&radius=25" to build the whaleAPI URL based on user selection
+function initMap(parameters) {
         $.ajax({
-          url: "http://hotline.whalemuseum.org/api.json?species=" + species + "&limit=1000",
+          url: "https://hotline.whalemuseum.org/api.json?" + parameters + "&limit=1000",
           method: "GET",
         }).then(function(response) {
             totalWhales = response;
             
         }).then(function() {
+            console.log("initMap is running! and parameters var is: " + parameters);
             initialMap = new google.maps.Map(document.getElementById('map'), {
-                zoom: 2,
-                center: new google.maps.LatLng(2.8,-187.3),
+                zoom: 6,
+                center: new google.maps.LatLng(48.5159,-123.1524),
                 mapTypeId: 'terrain'
               });
               for (var i = 0; i < totalWhales.length; i++) {
                   coords[0] = totalWhales[i].latitude;
                   coords[1] = totalWhales[i].longitude;
                   var latLng = new google.maps.LatLng(coords[0],coords[1]);
-                  console.log(coords)
                   var marker = new google.maps.Marker({position: latLng, map: initialMap});
+                  console.log(marker);
               }
             });
           }
           
-        var locationLong;
-        var locationLat;
-        function spot(z){
+// geocoder takes a text and returns latitude and longtitude of that location. Then we build whalesURL and pass it to initMap
+function geocoder(addressTxt){
         $.ajax({
-          url : "https://maps.googleapis.com/maps/api/geocode/json?address=" + z +"&key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70",
-          method : "GET"
+            url : "https://maps.googleapis.com/maps/api/geocode/json?address=" + addressTxt +"&key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70",
+            method : "GET"
         }).then(function(response){
-          locationLat = response.results[0].geometry.location.lat
-          console.log(locationLat)
-          locationLong = response.results[0].geometry.location.lng
-          console.log(locationLong)
+            var latLongURL;
+            var locationLat = response.results[0].geometry.location.lat;
+            latLongURL = "near=" + locationLat + ",";
+            var locationLong = response.results[0].geometry.location.lng;
+            console.log("the geocoder returned: " + locationLat + "," + locationLong);
+            latLongURL = latLongURL + locationLong + "&radius=25";
+            initMap(latLongURL);
         })
-      }
-      spot()
+}
 
 
-      $("option").on("click", function(){   
-        var x = $(this).text();
-        initMap(x);
-      });
-
-      $("#submit").on("click", function(event){
+// event handler for the species dropdown menu. calls the initMap by passing 
+$("option").on("click", function(){   
+        var speciesInput = $(this).text();
+        var speciesURL = "species=" + speciesInput; 
+        initMap(speciesURL);
+});
+// event handler for the search box. It passes the user Input to geocoder, which returns lat,lng to be passed as URL for whales API
+$("#submit").on("click", function(event){
         event.preventDefault();   
-        var z = $("#text").val().trim();
-        spot(z)
-      });
+        var searchInput = $("#text").val().trim();
+        console.log("the user searched for: " + searchInput);
+        geocoder(searchInput);
+});
 
 
 
