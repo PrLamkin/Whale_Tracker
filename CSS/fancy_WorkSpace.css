@@ -126,22 +126,22 @@ h1 {
     height: 70%;
     width: 22.055757487%;
     display: inline-block;
-    justify-content: right;
-    text-align: center;
 }
 
 .sideCard h1 {
     color: black;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    float: right;
+    font-weight: 900;
 }
 
 .sideCard p {
     color: black;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    float: none;
+    display: inline-block;
+    padding: 30px;
+    word-wrap: normal;
+    margin: 12px;
+    font-size: 20px;
 }
 
 html,
