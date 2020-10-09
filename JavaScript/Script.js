@@ -50,7 +50,7 @@ var whalesFacts = {
     "sea otter" : `Like other large whales, the humpback was a target for the whaling industry. The species was once hunted to the brink of extinction; its population fell by an estimated 90% before a 1966 moratorium. While stocks have partially recovered to some 80,000 animals worldwide, entanglement in fishing gear, collisions with ships and noise pollution continue to affect the species.`
 
 }
-// parameters will be either "species=userSelection" or "near=123,123&radius=25" to build the whaleAPI URL based on user selection
+    // parameters will be either "species=userSelection" or "near=123,123&radius=25" to build the whaleAPI URL based on user selection
 function initMap(parameters) {
         $.ajax({
           url: "https://hotline.whalemuseum.org/api.json?" + parameters + "&limit=1000",
@@ -95,19 +95,19 @@ function attachInfo(marker, infoBox) {
 }
 
 // geocoder takes a text and returns latitude and longtitude of that location. Then we build whalesURL and pass it to initMap
-function geocoder(addressTxt){
-        $.ajax({
-            url : "https://maps.googleapis.com/maps/api/geocode/json?address=" + addressTxt +"&key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70",
-            method : "GET"
-        }).then(function(response){
-            var latLongURL;
-            var locationLat = response.results[0].geometry.location.lat;
-            latLongURL = "near=" + locationLat + ",";
-            var locationLong = response.results[0].geometry.location.lng;
-            console.log("the geocoder returned: " + locationLat + "," + locationLong);
-            latLongURL = latLongURL + locationLong + "&radius=0.5";
-            initMap(latLongURL);
-        })
+function geocoder(addressTxt) {
+    $.ajax({
+        url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + addressTxt + "&key=AIzaSyDvMk0f3LfIKcsMM-iJ_wkRL5DVjCTR-70",
+        method: "GET"
+    }).then(function(response) {
+        var latLongURL;
+        var locationLat = response.results[0].geometry.location.lat;
+        latLongURL = "near=" + locationLat + ",";
+        var locationLong = response.results[0].geometry.location.lng;
+        console.log("the geocoder returned: " + locationLat + "," + locationLong);
+        latLongURL = latLongURL + locationLong + "&radius=0.5";
+        initMap(latLongURL);
+    })
 }
 
 
