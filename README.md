@@ -18,4 +18,4 @@ Step three: Profit?????
 No installion required! just plug the link in and go!
 
 Credits:
-I would like to thank <a href="https://github.com/samergain" target="_target">Samer</a> and <a href="https://github.com/jordan763" target="_target">Jordan</a> from the bottom of my heart. I had a really great time working on this project with them and felt like we all worked well with one another.
+I would like to thank <a href="https://github.com/samergain" target="_blank">Samer</a> and <a href="https://github.com/jordan763" target="_blank">Jordan</a> from the bottom of my heart. I had a really great time working on this project with them and felt like we all worked well with one another.
