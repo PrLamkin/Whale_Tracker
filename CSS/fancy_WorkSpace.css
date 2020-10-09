@@ -142,6 +142,7 @@ h1 {
     word-wrap: normal;
     margin: 12px;
     font-size: 20px;
+    max-height: 70%;
 }
 
 html,
@@ -177,6 +178,13 @@ footer a {
 
 @media (max-width: 375px) {
     body {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .sideCard {
         width: 100%;
         height: auto;
     }
